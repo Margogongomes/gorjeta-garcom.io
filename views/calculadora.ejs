@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcule sua Gorjeta</title>
+    <link rel="stylesheet" href="css/calculadora.css">
+</head>
+<body>
+  <div class="form">
+    <form action="/login" method="POST">
+
+      <div class="form-header">
+        <div class="title">
+          <h1>Calcule sua Gorjeta</h1>
+        </div>
+      </div>
+
+      <div class="input-group">
+
+        <div class="input-box">
+          <span for="tip">$</span>
+          <input id="tip" type="number" name="tip" placeholder="Digite o faturamento" required>
+        </div>
+        
+        <div class="input-porcent">
+          <label for="porcent">%</label>
+          <input type="range" value="0" min="0" max="100" id="range" oninput="rangenumber.value=value"/>
+          <input type="number" id="rangenumber" min="0" max="100" value="0" oninput="range.value=value">
+        </div>
+        <br>
+        <div class="continue-button">
+          <button id="calcular" type="submit" value="calcular">Calcular</button>
+        </div>
+        
+        <br><br>
+        <hr>
+        <br><br>
+
+        <div class="input-box">
+          <label for="valor">Valor Gorjeta</label>
+        </div>
+
+        <div class="input-box">
+          <label for="salario">Salário</label>
+        </div>
+
+        <div class="continue-button">
+          <button id="voltar" type="submit" value="voltar">Voltar</button>
+        </div>
+
+      </div>
+    </form>
+  </div>
+<script src="js/script.js"></script>
+</body>
+</html>

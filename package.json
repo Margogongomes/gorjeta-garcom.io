@@ -1,0 +1,23 @@
+{
+  "name": "gorjeta-garcom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Margogongomes/CRUD-garcom.git"
+  },
+  "author": "Marina Goncalves Gomes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Margogongomes/CRUD-garcom/issues"
+  },
+  "homepage": "https://github.com/Margogongomes/CRUD-garcom#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1"
+  }
+}

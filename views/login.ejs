@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faça o seu login</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>    
+<body>
+    <div class="container">
+        <div class="form-image">
+            <img src="img/garcom-login.png" alt="">
+        </div>
+        <div class="form">
+            <form action="/cadastro" method="GET">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Faça seu Login</h1>
+                    </div>
+                    <div class="cadastro-button">
+                        <button>Cadastrar</button>
+                    </div>
+                </div>
+
+                <div class="input-group">
+
+                    <div class="input-box">
+                        <label for="email">E-mail</label>
+                        <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="password">Senha</label>
+                        <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
+                    </div>
+
+                </div>
+
+                <div class="login-button">
+                    <button type="submit" value="login" id="login">Entrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./js/login.js"></script>
+</body>    
+</html>
