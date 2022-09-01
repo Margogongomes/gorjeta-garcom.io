@@ -9,11 +9,15 @@
 </head>
 <body>
   <div class="form">
+
     <form action="/login" method="POST">
 
       <div class="form-header">
         <div class="title">
           <h1>Calcule sua Gorjeta</h1>
+        </div>
+        <div class="voltar-button">
+          <button>Voltar</button>
         </div>
       </div>
 
@@ -30,7 +34,7 @@
           <input type="number" id="rangenumber" min="0" max="100" value="0" oninput="range.value=value">
         </div>
         <br>
-        <div class="continue-button">
+        <div class="calcular-button">
           <button id="calcular" type="submit" value="calcular">Calcular</button>
         </div>
         
@@ -44,10 +48,6 @@
 
         <div class="input-box">
           <label for="salario">Salário</label>
-        </div>
-
-        <div class="continue-button">
-          <button id="voltar" type="submit" value="voltar">Voltar</button>
         </div>
 
       </div>

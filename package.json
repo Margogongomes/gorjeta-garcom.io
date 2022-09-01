@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Margogongomes/CRUD-garcom.git"
+    "url": "git+https://github.com/Margogongomes/gorjeta-garcom.git"
   },
   "author": "Marina Goncalves Gomes",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Margogongomes/CRUD-garcom/issues"
+    "url": "https://github.com/Margogongomes/gorjeta-garcom/issues"
   },
-  "homepage": "https://github.com/Margogongomes/CRUD-garcom#readme",
+  "homepage": "https://github.com/Margogongomes/gorjeta-garcom#readme",
   "dependencies": {
     "ejs": "^3.1.8",
     "express": "^4.18.1"
