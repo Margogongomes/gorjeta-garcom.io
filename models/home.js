@@ -24,10 +24,6 @@ const home = db.define('homes', {
         type: Sequelize.INTEGER,
         allowNull: false
     },
-    button:{
-        type: Sequelize.STRING,
-        allowNull: false
-    }
 });
 
 //criar a tabela no banco de dados

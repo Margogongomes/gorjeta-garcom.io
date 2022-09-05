@@ -13,6 +13,10 @@ router.get("/cadastro", (req,res, next)=>{
     res.render("cadastro")
 })
 
+router.post("/tabela", (req,res, next)=>{
+    res.render("tabela")
+})
+
 router.get("/calculadora", (req, res, next)=>{
     res.render("calculadora")
 })
