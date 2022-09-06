@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 const db = require("./db");
 
-const home = db.define('homes', {
+const garcom = db.define('garcom', {
     id: {
         type: Sequelize.INTEGER,
         autoIncrement: true,
@@ -31,6 +31,6 @@ const home = db.define('homes', {
 
 
 //verifica se há alguma diferença na tabela e faz a alteração
-//home.sync({ alter: true});
+garcom.sync({ alter: true});
 
-module.exports = home;
+module.exports = garcom;

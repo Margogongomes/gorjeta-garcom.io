@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calcule sua Gorjeta</title>
-    <link rel="stylesheet" href="css/calculadora.css">
+    <link rel="stylesheet" src="css/calculadora.css">
 </head>
 <body>
   <div class="form">
@@ -21,39 +21,38 @@
 
         <div class="input-box">
           <span for="tip">$</span>
-          <input id="tip" type="number" name="tip" placeholder="Digite o faturamento" required>
+          <input id="tip" type="number" name="tip" placeholder="Digite seu faturamento" required>
         </div>
         
         <div class="input-porcent">
-          <label for="porcent">%</label>
+          <label for="porcent" id="porcent">%</label>
           <input type="range" value="0" min="0" max="100" id="range" oninput="rangenumber.value=value"/>
           <input type="number" id="rangenumber" min="0" max="100" value="0" oninput="range.value=value">
         </div>
         <br>
         <div class="continue-button">
-          <button id="calcular" type="button" value="calcular">Calcular</button>
+          <button id="calcular" type="button" value="calcular" onclick="calculo()">Calcular</button>
         </div>
 
         <br><br>
         <hr>
         <br><br>
-        
-        <div class="input-box">
-          <label for="valor">Valor Gorjeta</label>
-        </div>
 
         <div class="input-box">
-          <label for="salario">Salario</label>
+          <label type="text" id="sum" readonly>Salário + Gorjeta: </label>
         </div>
 
       </div>
-
-      <div class="continue-button">
-        <a href="calculadora.html"><button type="button" value="Entrar">Entrar</button></a>
-      </div>
-
     </form>
   </div>
-<script src="js/script.js"></script>
+<script>
+  function calculo(){
+    var percent = document.getElementById("rangenumber").value;
+    var faturamento = document.getElementById("tip").value;
+    var salario = document.getElementById("salario").value;
+
+    document.getElementById("sum").value = ((faturamento / 100) * percent) + salario;
+  }
+</script>
 </body>
 </html>
