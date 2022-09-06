@@ -6,6 +6,7 @@ const chaveSecreta = "SCKAODSDOKAOD";
 
 async function cadastroGarcom(req, res){
     const { name, email, salario } = req.body;
+    
     let { password } = req.body;
 
     password = bcrypt.hashSync(password, bcrypt.genSaltSync(10));

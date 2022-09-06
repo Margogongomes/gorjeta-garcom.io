@@ -32,6 +32,15 @@
         <br>
         <div class="continue-button">
           <button id="calcular" type="button" value="calcular" onclick="calculo()">Calcular</button>
+          <script>
+            function calculo(){
+              var percent = document.getElementById("rangenumber").value;
+              var faturamento = document.getElementById("tip").value;
+              var salario = document.getElementById("salario").value;
+          
+              document.getElementById("sum").value = ((percent / 100) * faturamento) + salario;
+            }
+          </script>
         </div>
 
         <br><br>
@@ -45,14 +54,5 @@
       </div>
     </form>
   </div>
-<script>
-  function calculo(){
-    var percent = document.getElementById("rangenumber").value;
-    var faturamento = document.getElementById("tip").value;
-    var salario = document.getElementById("salario").value;
-
-    document.getElementById("sum").value = ((faturamento / 100) * percent) + salario;
-  }
-</script>
 </body>
 </html>
