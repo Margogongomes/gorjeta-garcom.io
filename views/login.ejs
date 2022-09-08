@@ -13,13 +13,18 @@
             <img src="img/garcom-login.png" alt="">
         </div>
         <div class="form">
-            <form action="/api/login" method="post">
+            <form action="/calculadora" method="post">
                 <div class="form-header">
                     <div class="title">
                         <h1>Faça seu Login</h1>
                     </div>
                     <div class="cadastro-button">
-                        <button>Cadastrar</button>
+                        <input type="submit" value="Cadastrar" onclick="btnCadastro()">
+                        <script>
+                            function btnCadastro() {
+                                window.location.assign("/cadastro")
+                            }
+                        </script>
                     </div>
                 </div>
 

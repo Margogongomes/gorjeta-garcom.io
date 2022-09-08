@@ -56,7 +56,7 @@ body {
     align-items: center;
 }
 
-.cadastro-button button {
+.cadastro-button button{
     border: none;
     background-color: #54a55d;
     padding: 0.4rem 1rem;
@@ -70,6 +70,23 @@ body {
 .cadastro-button button:hover {
     background-color: #77b67e;
 }
+
+input[type=submit]{
+    border: none;
+    background-color: #54a55d;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+}
+
+input[type=submit]:hover {
+    background-color: #77b67e;
+}
+
+
 
 .form-header h1::after {
     content: '';

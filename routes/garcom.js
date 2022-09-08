@@ -18,7 +18,16 @@ router.get("/cadastro", (req,res, next)=>{
     res.render("cadastro")
 })
 
+router.post("/cadastro", function(req,res){
+    res.render("cadastro")
+})
+
 router.get("/calculadora", (req, res, next)=>{
+    res.send([body.cadastroGarcom])
+    res.send([body])
+})
+
+router.post("/calculadora", function(req, res){
     res.render("calculadora")
 })
 

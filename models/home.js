@@ -31,6 +31,6 @@ const garcom = db.define('garcom', {
 
 
 //verifica se há alguma diferença na tabela e faz a alteração
-garcom.sync({ alter: true});
+//garcom.sync({ alter: true});
 
 module.exports = garcom;
