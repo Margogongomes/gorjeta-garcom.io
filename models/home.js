@@ -24,6 +24,8 @@ const garcom = db.define('garcom', {
         type: Sequelize.INTEGER,
         allowNull: false
     },
+}, {
+    freezeTableName: true
 });
 
 //criar a tabela no banco de dados
@@ -31,6 +33,6 @@ const garcom = db.define('garcom', {
 
 
 //verifica se há alguma diferença na tabela e faz a alteração
-//garcom.sync({ alter: true});
+garcom.sync({ alter: true});
 
 module.exports = garcom;

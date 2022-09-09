@@ -1,20 +1,16 @@
 const express = require("express");
 const app = express();
+const mysql = require("mysql2");
 const port = 3000;
 const bodyParser = require('body-parser');
-
 const path = require("path");
-
-const garcomRoutes = require('./routes/garcom')
-
+const garcomRoutes = require('./routes/garcom');
 const home = require('./models/home');
-
-app.use(express.json())
-
 const db = require('./models/db');
 const cookie = require('cookie-parser');
 const sequelize = require("sequelize");
 
+app.use(express.json())
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 

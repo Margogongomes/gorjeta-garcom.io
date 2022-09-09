@@ -9,15 +9,16 @@ async function cadastroGarcom(req, res){
     
     let { password } = req.body;
 
-    password = bcrypt.hashSync(password, bcrypt.genSaltSync(10));
-
-    const garcomInfo = await garcom.findOrCreate({nome: name, email: email, senha: password, salario: salario });
-
+    const garcomInfo = await garcom.findOne({where: {nome: name}});
+    
     if(garcomInfo){
-        return 
+        return res.send("JA EXISTE GARÇOM");
     }
 
-    res.render("/calculadora", {name, email, salario});
+    await garcom.create({ nome: name, email: email, senha: password, salario: salario });
+    
+
+    res.render("calculadora", {email: email, salario: salario});
 }
 
 async function loginGarcom(req, res){
@@ -37,7 +38,7 @@ async function loginGarcom(req, res){
         res.render("calculadora", { salario: garcomInfo.salario });
     }
 
-    return res.redirect("/calculadora");
+    return res.redirect("/login");
 
 }
 

@@ -2,9 +2,10 @@ const express = require('express');
 const router = express.Router()
 
 const garcomController = require("../controllers/garcomController");
+const garcom = require('../models/home');
 
-router.post("/api/login", garcomController.loginGarcom);
-router.post("/api/cadastro", garcomController.cadastroGarcom);
+router.post("/login", garcomController.loginGarcom);
+router.post("/cadastro", garcomController.cadastroGarcom);
 
 router.get("/", (req, res)=>{
     res.render('login')
@@ -19,12 +20,11 @@ router.get("/cadastro", (req,res, next)=>{
 })
 
 router.post("/cadastro", function(req,res){
-    res.render("cadastro")
+    res.send("cadastro")
 })
 
-router.get("/calculadora", (req, res, next)=>{
-    res.send([body.cadastroGarcom])
-    res.send([body])
+router.get("/calculadora", (req,res, next)=>{
+    res.render("calculadora")
 })
 
 router.post("/calculadora", function(req, res){

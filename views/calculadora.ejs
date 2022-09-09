@@ -37,8 +37,8 @@
         <hr>
         <br><br>
         <div class="input-box">
-          <label type="text" readonly>Sua Gorjeta: <div id="val"></div></label>
-          <label type="text" readonly>Salário + Gorjeta: <div id="sum"></div></label> 
+          <label type="text" readonly id="val">Sua Gorjeta: </label><br>
+          <label type="text" readonly id="sum">Salário + Gorjeta: </label> 
         </div>
       </div>
     </form>
@@ -47,10 +47,11 @@
     function calculo(){
       var percent = document.getElementById("rangenumber").value;
       var faturamento = document.getElementById("tip").value;
-      var salario = document.getElementById("salario").value;
+      var salario = "<%= salario %>;";
       
       document.getElementById("val").value = ((percent / 100) * faturamento);
       document.getElementById("sum").value = ((percent / 100) * faturamento) + salario;
+
     }
   </script>
 </body>
