@@ -15,6 +15,15 @@
         <div class="title">
           <h1>Calcule sua Gorjeta</h1>
         </div>
+
+        <div class="sair-button">
+          <input type="button" value="Sair" onclick="btnSair()">
+            <script>
+              function btnSair() {
+                  window.location.assign("/login")
+              }
+            </script>
+        </div>
       </div>
 
       <div class="input-group">
@@ -28,7 +37,7 @@
           <span for="percent">%</span>
         </div>
 
-        <div class="continue-button">
+        <div class="calcular-button">
           <button type="button" onclick="calculo()">Calcular</button>
         </div>
         <br><br>
