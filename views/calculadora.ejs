@@ -18,7 +18,6 @@
       </div>
 
       <div class="input-group">
-
         <div class="input-box">
           <span for="tip">$</span>
           <input id="tip" type="number" name="tip" placeholder="Digite seu faturamento" required>
@@ -46,11 +45,13 @@
   </div>
   <script>
     function calculo(){
-      var percent = document.getElementById("percent").value;
-      var tip = document.getElementById("tip").value;
-      // var salario = document.getElementById("salario").value;
+      var salario = "<%= salario %>";
+      salario = parseFloat(salario);
+      var percent = parseInt(document.getElementById("percent").value);
+      var tip = parseInt(document.getElementById("tip").value);
       document.getElementById("val").value = (percent / 100) * tip;
-      // document.getElementById("sum").value = ((percent / 100) * tip) + salario;
+      document.getElementById("sum").value = ((percent / 100) * tip) + salario;
+      ;
     }
   </script>
 </body>
