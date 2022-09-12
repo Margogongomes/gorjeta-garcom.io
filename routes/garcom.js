@@ -28,6 +28,7 @@ router.get("/calculadora", (req,res, next)=>{
 })
 
 router.post("/calculadora", function(req, res){
+    var salario= req.body.salario;
     res.render("calculadora")
 })
 

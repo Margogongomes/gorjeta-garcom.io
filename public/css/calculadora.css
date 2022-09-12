@@ -51,15 +51,6 @@ body {
     margin-bottom: 1.1rem;
 }
 
-.input-box [type="range"] {
-    -webkit-appearance: none;
-    width: 200px;
-    height: 7px;
-    border-radius: 5px;
-    background-size: 70% 100%;
-    background-repeat: no-repeat;
-}
-
 .input-box input {
     margin: 0.6rem 0;
     padding: 0.8rem 1.2rem;
@@ -88,7 +79,7 @@ body {
     color: #000000be;
 }
 
-input[type=submit]{
+.continue-button button {
     width: 40%;
     margin: 0 auto;
     display: flex;
@@ -102,11 +93,11 @@ input[type=submit]{
     padding: 0.62rem;
     border-radius: 5px;
     cursor: pointer;
-  }
+}
 
-  input[type=submit]:hover {
-    background-color: #77b67e;
-  }
+.continue-button button:hover {
+    background-color: #54a55d;
+}
 
 @media screen and (max-width: 1330px) {
     .form-image {

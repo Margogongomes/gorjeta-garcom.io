@@ -42,4 +42,14 @@ async function loginGarcom(req, res){
 
 }
 
-module.exports = {cadastroGarcom, loginGarcom};
+async function pegarSalario(req, res){
+    const { email, salario } = req.body;
+
+    const garcomInfo = await garcom.findOne({where: {email: email, salario: salario}});
+    
+
+    res.render("calculadora", {email: garcomInfo.email, salario: garcomInfo.salario});
+}
+
+
+module.exports = {cadastroGarcom, loginGarcom, pegarSalario};

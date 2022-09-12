@@ -9,7 +9,7 @@
 </head>
 <body>
   <div class="form">
-    <form action="#">
+    <form action="/calculadora" method="post">
 
       <div class="form-header">
         <div class="title">
@@ -24,34 +24,33 @@
           <input id="tip" type="number" name="tip" placeholder="Digite seu faturamento" required>
         </div>
         
-        <div class="input-porcent">
-          <label for="porcent" id="porcent">%</label>
-          <input type="range" value="0" min="0" max="100" id="range" oninput="rangenumber.value=value"/>
-          <input type="number" id="rangenumber" min="0" max="100" value="0" oninput="range.value=value">
+        <div class="input-box">
+          <input id="percent" type="number" name="percent" placeholder="Digite sua porcentagem" required>
+          <span for="percent">%</span>
         </div>
-        <br>
+
         <div class="continue-button">
-          <input id="calcular" type="submit" value="Calcular" onclick="calculo()">
+          <button type="button" onclick="calculo()">Calcular</button>
         </div>
         <br><br>
         <hr>
         <br><br>
         <div class="input-box">
-          <label type="text" readonly id="val">Sua Gorjeta: </label><br>
-          <label type="text" readonly id="sum">Salário + Gorjeta: </label> 
+          <label id="valGorjeta">Sua Gorjeta:</label>
+          <input id="val" type="text" readonly><br>
+          <label id="sumGorjeta">Salário + Gorjeta:</label>
+          <input id="sum" type="text" readonly> 
         </div>
       </div>
     </form>
   </div>
   <script>
     function calculo(){
-      var percent = document.getElementById("rangenumber").value;
-      var faturamento = document.getElementById("tip").value;
-      var salario = "<%= salario %>;";
-      
-      document.getElementById("val").value = ((percent / 100) * faturamento);
-      document.getElementById("sum").value = ((percent / 100) * faturamento) + salario;
-
+      var percent = document.getElementById("percent").value;
+      var tip = document.getElementById("tip").value;
+      // var salario = document.getElementById("salario").value;
+      document.getElementById("val").value = (percent / 100) * tip;
+      // document.getElementById("sum").value = ((percent / 100) * tip) + salario;
     }
   </script>
 </body>
