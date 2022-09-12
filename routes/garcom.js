@@ -15,6 +15,14 @@ router.get("/login", (req, res)=>{
     res.render("login");
 });
 
+router.get("/table", (req, res)=>{
+    res.render("table")
+});
+
+router.post("/table", (req, res)=>{
+    res.render("table")
+});
+
 router.get("/cadastro", (req,res, next)=>{
     res.render("cadastro")
 })
@@ -28,6 +36,7 @@ router.get("/calculadora", (req,res, next)=>{
 })
 
 router.post("/calculadora", function(req, res){
+    var salario= req.body.salario;
     res.render("calculadora")
 })
 

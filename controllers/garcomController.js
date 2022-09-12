@@ -28,18 +28,32 @@ async function loginGarcom(req, res){
         email: email
     }});
 
-    const comparacaoSenha = bcrypt.compareSync(password, garcomInfo.senha);
+    if(!garcomInfo){
+        return res.send("Conta especificada não foi encontrada!");
+    }
+
+    const comparacaoSenha = password === garcomInfo.senha;
 
     if(comparacaoSenha){
         await res.cookie("jwt-token", jwt.sign({
             email: garcomInfo.email,
             salario: garcomInfo.salario
         }, chaveSecreta));
-        res.render("calculadora", { salario: garcomInfo.salario });
+        return res.render("calculadora", { salario: garcomInfo.salario });
     }
 
-    return res.redirect("/login");
+    return res.send("Senha incorreta!");
 
 }
 
-module.exports = {cadastroGarcom, loginGarcom};
+async function pegarSalario(req, res){
+    const { email, salario } = req.body;
+
+    const garcomInfo = await garcom.findOne({where: {email: email, salario: salario}});
+    
+
+    res.render("calculadora", {email: garcomInfo.email, salario: garcomInfo.salario});
+}
+
+
+module.exports = {cadastroGarcom, loginGarcom, pegarSalario};
