@@ -15,13 +15,13 @@ router.get("/login", (req, res)=>{
     res.render("login");
 });
 
-router.get("/table", (req, res)=>{
-    res.render("table")
-});
+// router.get("/table", (req, res)=>{
+//     res.render("table")
+// });
 
-router.post("/table", (req, res)=>{
-    res.render("table")
-});
+// router.post("/table", (req, res)=>{
+//     res.render("table")
+// });
 
 router.get("/cadastro", (req,res, next)=>{
     res.render("cadastro")
